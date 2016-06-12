@@ -1,0 +1,17 @@
+== Tagger
+
+* Ruby version
+- ruby 2.1.1p76 (2014-02-24 revision 45161) [x86_64-darwin13.0]
+- Rails 4.2.1
+
+* Database creation
+`rake db:create`
+`rake db:migrate`
+
+* How to run the test suite
+`rspec spec`
+
+* Deployment instructions
+`git clone git@github.com:adamrdavid/tagging-api.git`
+`cd tagging-api`
+`bundle install`
