@@ -15,10 +15,12 @@ POST /entities
 
 If the entity already exists it should replace it and all tags, not append to it
 ```
+
 **Example:**
+
 ```
 curl -H "Content-Type: application/json" -H 'Authorization: Token token="1d9f3251b1591a5d9529c88655950370"' -d '{"entity": {"entity_type": "Product", "entity_id": "bike5"}, "tags": ["Small", "Blue", "Bike"]}' -X POST 'http://localhost:3000/api/entities'
-``` creates entity
+```
 
 ### Retrieve an Entry
 
@@ -27,13 +29,16 @@ GET /entities/:entity_type/:entity_id
 
 - should return a JSON representation of the entity and the tags it has assigned
 ```
-*Examples:*
+
+**Examples:**
+
 ```
+retrieves all entities:
 curl http://api.tagger.com/api/entities -H 'Authorization: Token token="1d9f3251b1591a5d9529c88655950370"'
-``` retrieves all entities
-```
+
+retrieves a specific entity:
 curl -X GET 'http://localhost:3000/api/entities?entity_type=Product&entity_id=bike2' -H 'Authorization: Token token="1d9f3251b1591a5d9529c88655950370"'
-``` retrieves a specific entity
+``` 
 
 ### Remove an Entry
 
@@ -42,10 +47,12 @@ DELETE /entities/:entity_type/:entity_id
 
 Completely removes the entity and tags
 ```
+
 **Example:**
+
 ```
 curl -X DELETE 'http://localhost:3000/api/entities?entity_type=Product&entity_id=bike5' -H 'Authorization: Token token="1d9f3251b1591a5d9529c88655950370"'
-``` deletes a specific entity
+```
 
 ### Retrieve Stats about all Tags
 
@@ -56,7 +63,9 @@ Retrives statistics about all tags
 
 e.g. [{tag: 'Bike', count: 5}, {tag: 'Pink', count: 3}]
 ```
+
 **Example:**
+
 ```
 curl -X GET 'http://localhost:3000/api/tags/stats' -H 'Authorization: Token token="1d9f3251b1591a5d9529c88655950370"'
 ```
@@ -68,7 +77,9 @@ GET /entities/stats/:entity_type/:entity_id
 
 Retrives statistics about a specific tagged entity
 ```
+
 **Example:**
+
 ```curl -X GET 'http://localhost:3000/api/entities/stats?entity_type=Product&entity_id=bike5' -H 'Authorization: Token token="1d9f3251b1591a5d9529c88655950370"'
 ```
 
