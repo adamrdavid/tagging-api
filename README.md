@@ -80,7 +80,8 @@ Retrives statistics about a specific tagged entity
 
 **Example:**
 
-```curl -X GET 'http://localhost:3000/api/entities/stats?entity_type=Product&entity_id=bike5' -H 'Authorization: Token token="1d9f3251b1591a5d9529c88655950370"'
+```
+curl -X GET 'http://localhost:3000/api/entities/stats?entity_type=Product&entity_id=bike5' -H 'Authorization: Token token="1d9f3251b1591a5d9529c88655950370"'
 ```
 
 ### What we're looking for:
